@@ -1,113 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ServerScriptsX- Frontend developer </title>
-        <meta
-            name="description"
-            content="Hire a frontend developer for your company or your project"
-        />
-        <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-        />
-        <link rel="stylesheet" href="style.css" />
-        <script src="https://cdn.tailwindcss.com"></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div class="contanier">
-            <header>
-                <nav>
-                    <a href="#" class="logo">ServerScriptsX Portfolio</a>
-                    <div class="nav-links">
-                    </div>
-                    <a href="https://www.youtube.com/@ServerScriptsX" class="btn"
-                        >Subscribe</a
-                    >
-                    <button
-                        role="menu"
-                        aria-label="button"
-                        class="menu"
-                        onclick="event.currentTarget.classList.toggle('active')"
-                    >
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </button>
-                </nav>
-            </header>
-
-            <div class="content">
-                <div class="hero-text">
-                    <h1 class="h1">ServerScriptsX</h1>
-                        <div class="typewriter" data-aos="fade-right" data-aos-duration="1500" data-aos-delay="900">I'm a<br> <span class="typewriter-text"></span><label class="label" for="">|</label></div>
-                    <p class="p">
-                        ServerScriptsX is a passionate Frontend Developer and technology enthusiast.
-                      
-                        having 1 year of experience in web development with a deep interest in the ever-evolving world of technology. Your can contact me on discord for any code help/ project help. Happy to Help :)
-                    </p>
-                    <div class="container mx-auto p-0">
-                        <h2 class="text-3xl font-bold mb-4 text-white">My Tech Stack</h2>
-                        <div class="flex flex-wrap gap-4">
-                            <div class="bg-gray-800 text-white px-4 py-2 rounded border border-gray-700">HTML, CSS , Javascript</div>
-                            <div class="bg-gray-800 text-white px-4 py-2 rounded border border-gray-700">Git & GitHub</div>
-                        </div>
-                    </div>
-                    <a class="btn"
-                        >Discord: serverscriptsx</a
-                    >
-                </div>
-                <div class="hero-img">
-                    <img src="Hamilton.jpg"/>
-                </div>
-            </div>
-
-            <div class="social-links">
-                <span>Follow Me -></span>
-                <a href="https://github.com/ServerScriptsX"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.youtube.com/@ServerScriptsX"><i class="fa-brands fa-youtube"></i></a>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"> ServerScriptsX</a>
+        <nav>
+            <a href="#" class="active"> Home</a>
+        </nav>
+    </header>
+    <section class="home">
+        <div class="home-img">
+            <img src="Hamilton.jpg" alt="">
         </div>
-        <script>
-
-// Typewriter Effect
-const texts = [
-    "DEVELOPER",
-    "DESIGNER",
-    "STUDENT PROGRAMMER"
-]
-let speed  =100;
-const textElements = document.querySelector(".typewriter-text");
-let textIndex = 0;
-let charcterIndex = 0;
-function typeWriter(){
-    if (charcterIndex < texts[textIndex].length){
-        textElements.innerHTML += texts[textIndex].charAt(charcterIndex);
-        charcterIndex++;
-        setTimeout(typeWriter, speed);
-    }
-    else{
-        setTimeout(eraseText, 1000)
-    }
-}
-function eraseText(){
-    if(textElements.innerHTML.length > 0){
-        textElements.innerHTML = textElements.innerHTML.slice(0,-1);
-        setTimeout(eraseText, 50)
-    }
-    else{
-        textIndex = (textIndex + 1) % texts.length;
-        charcterIndex = 0;
-        setTimeout(typeWriter, 500)
-    }
-}
-window.onload = typeWriter
-
-        </script>
-    </body>
+        <div class="home-content">
+            <h1>Hi, It's <span>Alex</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I am ServerScriptsX. I have Experience In HTML CSS, And Javascript. Contact me on discord for Code Edits or Code Help!
+        </p>
+            <div class="social-icons">
+                <a href="https://github.com/ServerScriptsX"><i class="fa-brands fa-github"></i></a>
+                <a href="https://x.com/ServerScriptsX"><i class="fa-brands fa-x-twitter"></i></a>
+            </div>
+            <a href="#" class="btn">Contact me On Dsicord. : ServerScriptsX.</a>
+        </div>
+    </section>
+</body>
 </html>
