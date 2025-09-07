@@ -56,7 +56,7 @@ body, html {
 .profile-container {
     display: flex;
     align-items: flex-start;
-    justify-content: center; /* Center horizontally */
+    justify-content: center; 
     position: absolute;
     left: 50%;
     bottom: -300px;
@@ -84,15 +84,15 @@ body, html {
     font-size: 20px;
     max-width: 300px;
     line-height: 1.4;
-    text-align: center; /* Center text in bio */
+    text-align: center;
 }
 .profile-tiles {
     margin-left: 24px;
     display: grid;
-    grid-template-columns: 1fr 1fr; /* 2 columns */
+    grid-template-columns: 1fr 1fr; 
     grid-auto-rows: minmax(0, auto);
     gap: 12px;
-    justify-items: center; /* Center tiles in each column */
+    justify-items: center; 
     align-items: center;
     max-height: 400px;
 }
@@ -113,4 +113,5 @@ body, html {
 
 .tile:hover {
     background: rgba(255,255,255,0.25);
+
 }
