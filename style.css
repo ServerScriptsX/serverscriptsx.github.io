@@ -1,0 +1,369 @@
+/* --- RESET & BASE STYLES --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #e0e0e0;
+  font-family: 'Cal Sans', sans-serif;
+  overflow-x: hidden;
+  position: relative;
+} 
+
+.main-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* --- HERO SECTION (Waves Removed) --- */
+.hero-section {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Prevent scrollbar issues from removed waves */
+  background:
+    linear-gradient(135deg, rgba(26,26,46,0.6) 0%, rgba(22,33,62,0.6) 100%),
+    url('download.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: overlay;
+} 
+
+.hero-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero-text::before {
+  content: "";
+  position: absolute;
+  inset: -8px;
+  background: rgba(2, 24, 56, 0.28);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 14px;
+  z-index: 1;
+  pointer-events: none;
+  border: 1px solid rgba(58,160,255,0.06);
+}
+
+.hero-text > * {
+  position: relative;
+  z-index: 3;
+}  
+
+.title {
+  font-family: 'Zalando Sans Expanded', 'Zalando Sans', sans-serif;
+  font-size: 72px;
+  font-weight: 900;
+  letter-spacing: 2px; /* Set to static value instead of animating */
+  color: #ff2b2b;
+  margin-top: 18px;
+  margin-bottom: 20px;
+  padding: 0 28px;
+  display: inline-block;
+  background: linear-gradient(135deg, #ff6b6b 0%, #ff1a1a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 14px 60px rgba(255,50,50,0.18);
+}    
+
+.typewriter {
+  font-family: 'Cal Sans', sans-serif;
+  font-size: 32px;
+  color: #cfeeff;
+  height: 50px;
+  letter-spacing: 2px;
+}   
+
+.typewriter h1 {
+  font-size: 32px;
+  color: #cfeeff;
+  margin: 0;
+  font-family: 'Cal Sans', sans-serif;
+  letter-spacing: 2px;
+}   
+
+/* --- SOCIAL LINKS --- */
+.social-links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.social-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #3aa0ff;
+  border-radius: 50%;
+  color: #3aa0ff;
+  font-size: 24px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: rgba(58,160,255,0.08);
+  text-decoration: none;
+}
+
+.social-icon:hover {
+  background: #3aa0ff;
+  color: #071426;
+  box-shadow: 0 8px 25px rgba(58,160,255,0.28);
+  transform: scale(1.1);
+}
+
+/* --- ABOUT / PROFILE SECTION --- */
+.profile-container {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.8) 0%, rgba(22, 33, 62, 0.8) 100%);
+}
+
+.profile-card {
+  width: min(85vw, 1200px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  background: #1a1a2e;
+  padding: 60px;
+  border-radius: 60px;
+  box-shadow: 0 15px 40px rgba(255, 159, 67, 0.15);
+  border: 2px solid rgba(255, 159, 67, 0.2);
+  max-width: 1200px;
+}
+
+.profile-picture {
+  width: 250px;
+  height: 250px;
+  border-radius: 50px;
+  object-fit: cover;
+  border: 5px solid #ff9f43;
+  box-shadow: 0 10px 30px rgba(255, 159, 67, 0.25);
+  transition: all 0.3s ease;
+}
+
+.profile-picture:hover {
+  box-shadow: 0 15px 50px rgba(255, 159, 67, 0.4);
+  transform: scale(1.05);
+}
+
+.profile-bio {
+  text-align: center;
+  max-width: 600px;
+}
+
+.profile-bio h2 {
+  font-family: 'Cal Sans', sans-serif;
+  font-size: 32px;
+  color: #ff9f43;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+} 
+
+.profile-bio p {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #d0d0d0;
+}
+
+/* --- SKILLS SECTION --- */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 600px;
+}
+
+.skill-tag {
+  padding: 12px 20px;
+  border: 2px solid #ff9f43;
+  border-radius: 30px;
+  color: #ff9f43;
+  text-align: center;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: rgba(255, 159, 67, 0.08);
+}
+
+.skill-tag:hover {
+  background: #ff9f43;
+  color: #1a1a2e;
+  box-shadow: 0 8px 20px rgba(255, 159, 67, 0.3);
+  transform: translateY(-3px);
+}
+
+.skill-bars {
+  width: 100%;
+  max-width: 700px;
+  margin-top: 30px;
+  text-align: left;
+}
+
+.skill-bars h3 {
+  font-family: 'Cal Sans', sans-serif;
+  color: #ff9f43;
+  margin-bottom: 12px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.skill {
+  margin-bottom: 14px;
+}
+
+.skill-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: #d0d0d0;
+  margin-bottom: 6px;
+}
+
+.skill-bar {
+  background: rgba(255,255,255,0.04);
+  height: 12px;
+  border-radius: 999px;
+  overflow: hidden;
+  border: 1px solid rgba(255,159,67,0.08);
+}
+
+.skill-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg,#ff9f43 0%, #ff7675 100%);
+  border-radius: inherit;
+  transition: width 0.8s ease-out; /* Keeps the progress bar fill smooth */
+} 
+
+/* --- WORKS SECTION --- */
+.works-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+} 
+
+.section-title {
+  font-family: 'Cal Sans', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  color: #ff9f43;
+  margin-bottom: 60px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+} 
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-card {
+  background: #1a1a2e;
+  border-radius: 40px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  box-shadow: 0 10px 30px rgba(255, 159, 67, 0.1);
+  border: 2px solid rgba(255, 159, 67, 0.15);
+}
+
+.work-card:hover {
+  box-shadow: 0 20px 50px rgba(255, 159, 67, 0.25);
+  transform: translateY(-5px);
+  border-color: rgba(255, 159, 67, 0.4);
+}
+
+.work-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 40px 40px 0 0;
+}
+
+.work-content {
+  padding: 25px;
+}
+
+.work-content h3 {
+  font-family: 'Cal Sans', sans-serif;
+  color: #ff9f43;
+  font-size: 22px;
+  margin-bottom: 10px;
+} 
+
+.work-content p {
+  color: #b0b0b0;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.work-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 5px 12px;
+  background: rgba(255, 159, 67, 0.1);
+  border: 1px solid #ff9f43;
+  border-radius: 15px;
+  color: #ff9f43;
+  font-size: 12px;
+}
+
+/* --- FOOTER --- */
+.footer {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  padding: 30px 20px;
+  text-align: center;
+  color: #b0b0b0;
+  border-radius: 50px 50px 0 0;
+  border-top: 2px solid rgba(255, 159, 67, 0.2);
+}
+
+.footer p {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 768px) {
+  .title {
+    font-size: 48px;
+    letter-spacing: 4px;
+  }
+  .typewriter h1 { font-size: 24px; }
+  .profile-picture { width: 180px; height: 180px; }
+  .profile-card { padding: 40px 20px; border-radius: 40px; }
+  .section-title { font-size: 36px; }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 36px;
+    letter-spacing: 2px;
+  }
+  .typewriter h1 { font-size: 18px; }
+  .profile-picture { width: 150px; height: 150px; }
+  .skills-grid { grid-template-columns: 1fr; }
+}

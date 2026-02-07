@@ -1,0 +1,106 @@
+after npm skill -
+
+
+  <section class="works-section">
+    <h2 class="section-title">Works</h2>
+    <div class="works-grid">
+      <div class="work-card">
+        <img src="asus.jpg" alt="Project One" class="work-image">
+        <div class="work-content">
+          <h3>Project One</h3>
+          <p>A beautiful portfolio website with smooth interactions and modern design</p>
+          <div class="work-tags">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+      <div class="work-card">
+        <img src="asus.jpg" alt="Project Two" class="work-image">
+        <div class="work-content">
+          <h3>Project Two</h3>
+          <p>Web application with sleek UI and smooth interactions</p>
+          <div class="work-tags">
+            <span class="tag">React</span>
+            <span class="tag">CSS</span>
+            <span class="tag">API</span>
+          </div>
+        </div>
+      </div>
+      <div class="work-card">
+        <img src="asus.jpg" alt="Project Three" class="work-image">
+        <div class="work-content">
+          <h3>Project Three</h3>
+          <p>Creative design implementation with smooth animations</p>
+          <div class="work-tags">
+            <span class="tag">Design</span>
+            <span class="tag">Animation</span>
+            <span class="tag">UX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer class="footer">
+  <p>&copy; 2026 ServerScriptsX. All rights reserved.</p>
+</footer>
+
+
+
+
+css -
+
+.works-section {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+} 
+
+.section-title {
+  font-family: 'Cal Sans', sans-serif;
+  font-size: 48px;
+  text-align: center;
+  color: #ff9f43;
+  margin-bottom: 60px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+} 
+
+.works-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.work-card {
+  background: #1a1a2e;
+  border-radius: 40px;
+  overflow: hidden;
+  transition: all 0.4s ease;
+  animation: fadeInUp 0.8s ease-out;
+  box-shadow: 0 10px 30px rgba(255, 159, 67, 0.1);
+  border: 2px solid rgba(255, 159, 67, 0.15);
+}
+
+.work-card:hover {
+  box-shadow: 0 20px 50px rgba(255, 159, 67, 0.25);
+  transform: translateY(-10px);
+  border-color: rgba(255, 159, 67, 0.4);
+}
+
+.work-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  border-radius: 40px 40px 0 0;
+  transition: transform 0.3s ease;
+}
+
+.work-card:hover .work-image {
+  transform: scale(1.05);
+}
